@@ -1,0 +1,13 @@
+<form method="POST">
+{% csrf_token %}
+
+<label for="Username">Username</label><br>
+<input type="text" name="Username" id=""> <br>
+
+<label for="Password">Password</label><br>
+<input type="password" name="Password" id=""><br>
+
+<input type="submit" name="" id="">
+</form>
+
+{{error_message}}

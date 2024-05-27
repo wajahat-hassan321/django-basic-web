@@ -1,0 +1,21 @@
+<h1>my fav books</h1>
+{% for book in books %}
+
+<h3 style="padding-top: 5%;">{{ book.book_name }}</h3>
+<b>
+ 
+<a href="{% url 'book' book.id %}"> <img style=" width: 150px;
+    border-radius: 20px;" class="bookimg" src="{{ book.book_image.url }}" 
+    alt="{{ book.book_name }}"><br></a>
+
+
+  <div style=" font-size: small; padding-bottom: 2%;">Genre:
+
+    {% for topic in book.book_genre.all %}
+    {{ topic.genre }}
+
+
+    {% endfor %}
+
+    {% endfor %}
+    
